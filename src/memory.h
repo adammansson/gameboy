@@ -11,4 +11,6 @@ void memory_init(memory_t *memory);
 
 uint8_t memory_read(memory_t *memory, uint16_t address);
 
+void memory_write(memory_t *memory, uint16_t address, uint8_t data);
+
 #endif

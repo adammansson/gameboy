@@ -10,6 +10,8 @@ typedef struct cpu {
 
 void cpu_init(cpu_t *cpu);
 
+uint8_t *cpu_register_from_code(cpu_t *cpu, uint8_t code);
+
 void cpu_print(cpu_t *cpu);
 
 #endif

@@ -12,3 +12,8 @@ uint8_t memory_read(memory_t *memory, uint16_t address)
 {
 	return memory->data[address];
 }
+
+void memory_write(memory_t *memory, uint16_t address, uint8_t data)
+{
+	memory->data[address] = data;
+}

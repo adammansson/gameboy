@@ -4,7 +4,7 @@
 CC := cc
 
 # set the compiler flags
-CFLAGS := -Wall -Wextra -ansi -pedantic
+CFLAGS := -Wall -Wextra -std=c2x -pedantic
 
 SRCS = $(wildcard src/*/*.c src/*.c *.c )
 HDRS = $(wildcard src/*/.h src/*.h *.h)
