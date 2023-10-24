@@ -5,16 +5,16 @@
 void cpu_init(cpu_t *cpu)
 {
 	cpu->A = 0;
+	cpu->F = 0;
 	cpu->B = 0x80;
 	cpu->C = 0;
 	cpu->D = 0;
 	cpu->E = 0;
-	cpu->H = 0;
+	cpu->H = 0xFF;
 	cpu->L = 0;
-	cpu->F = 0;
 
 	cpu->PC = 0;
-	cpu->SP = 0;
+	cpu->SP = 0xFFF8;
 }
 
 uint8_t *cpu_register_from_code(cpu_t *cpu, uint8_t code)

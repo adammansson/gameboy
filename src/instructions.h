@@ -4,73 +4,10 @@
 #include "cpu.h"
 #include "memory.h"
 
-enum
-{
-	LD_AA = 0x7F,
-	LD_AB = 0x78,
-	LD_AC = 0x79,
-	LD_AD = 0x7A,
-	LD_AE = 0x7B,
-	LD_AH = 0x7C,
-	LD_AL = 0x7D,
+#include <stdint.h>
 
-	LD_BA = 0x47,
-	LD_BB = 0x40,
-	LD_BC = 0x41,
-	LD_BD = 0x42,
-	LD_BE = 0x43,
-	LD_BH = 0x44,
-	LD_BL = 0x45,
+void push_register_pair(cpu_t *cpu, memory_t *memory, uint8_t higher, uint8_t lower);
 
-	LD_CA = 0x4F,
-	LD_CB = 0x48,
-	LD_CC = 0x49,
-	LD_CD = 0x4A,
-	LD_CE = 0x4B,
-	LD_CH = 0x4C,
-	LD_CL = 0x4D,
-
-	LD_DA = 0x57,
-	LD_DB = 0x50,
-	LD_DC = 0x51,
-	LD_DD = 0x52,
-	LD_DE = 0x53,
-	LD_DH = 0x54,
-	LD_DL = 0x55,
-
-	LD_EA = 0x5F,
-	LD_EB = 0x58,
-	LD_EC = 0x59,
-	LD_ED = 0x5A,
-	LD_EE = 0x5B,
-	LD_EH = 0x5C,
-	LD_EL = 0x5D,
-
-	LD_HA = 0x67,
-	LD_HB = 0x60,
-	LD_HC = 0x61,
-	LD_HD = 0x62,
-	LD_HE = 0x63,
-	LD_HH = 0x64,
-	LD_HL = 0x65,
-
-	LD_LA = 0x6F,
-	LD_LB = 0x68,
-	LD_LC = 0x69,
-	LD_LD = 0x6A,
-	LD_LE = 0x6B,
-	LD_LH = 0x6C,
-	LD_LL = 0x6D,
-
-	LD_AN = 0x3E,
-	LD_BN = 0x06,
-	LD_CN = 0x0E,
-	LD_DN = 0x16,
-	LD_EN = 0x1E,
-	LD_HN = 0x26,
-	LD_LN = 0x2E
-};
-
-void execute_instruction(cpu_t *cpu, memory_t *memory);
+void pop_register_pair(cpu_t *cpu, memory_t *memory, uint8_t *higher, uint8_t *lower);
 
 #endif

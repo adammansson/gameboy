@@ -3,8 +3,10 @@
 
 #include <stdint.h>
 
+#define MEMORY_SIZE 65536
+
 typedef struct memory {
-	uint8_t data[65536];
+	uint8_t data[MEMORY_SIZE];
 } memory_t;
 
 void memory_init(memory_t *memory);
