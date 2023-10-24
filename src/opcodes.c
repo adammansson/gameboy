@@ -23,21 +23,25 @@ void execute_instruction(cpu_t *cpu, memory_t *memory)
 		break;
 	case 0xC1: // POP BC
 		pop_register_pair(cpu, memory, &cpu->B, &cpu->C);
+		break;
 	case 0xC5: // PUSH BC
 		push_register_pair(cpu, memory, &cpu->B, &cpu->C);
 		break;
 	case 0xD1: // POP DE
 		pop_register_pair(cpu, memory, &cpu->D, &cpu->E);
+		break;
 	case 0xD5: // PUSH DE
 		push_register_pair(cpu, memory, &cpu->D, &cpu->E);
 		break;
 	case 0xE1: // POP HL
 		pop_register_pair(cpu, memory, &cpu->H, &cpu->L);
+		break;
 	case 0xE5: // PUSH HL
 		push_register_pair(cpu, memory, &cpu->H, &cpu->L);
 		break;
 	case 0xF1: // POP AF
 		pop_register_pair(cpu, memory, &cpu->A, cpu->F);
+		break;
 	case 0xF5: // PUSH AF
 		push_register_pair(cpu, memory, &cpu->A, &cpu->F);
 		break;
